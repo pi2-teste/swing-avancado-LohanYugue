@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 public class VendaComputadorView extends javax.swing.JFrame {
 
     Computador meuComputador;
-    
+    String escolha;
     /**
      * Creates new form VendaComputadorView
      */
@@ -374,6 +374,9 @@ public class VendaComputadorView extends javax.swing.JFrame {
     private void botaoPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPCActionPerformed
         // TODO add your handling code here:
         this.image.setIcon(new ImageIcon(getClass().getResource("/pc.png")));
+        Computador meuComputador = new Computador();
+        escolha = meuComputador.getTipoComputador();
+        
     }//GEN-LAST:event_botaoPCActionPerformed
 
     private void botaoNoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoNoteActionPerformed
@@ -394,9 +397,9 @@ public class VendaComputadorView extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         // TODO add your handling code here:
-        
-        
-        
+        Computador meuComputador = new Computador();
+        escolha = meuComputador.getTipoComputador();
+        System.out.println("Obrigado por comprar um "+escolha);
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
